@@ -74,7 +74,7 @@ jobs:
           cache-to: type=gha,mode=max
 
   deploy:
-   needs: build_and_publish
+   needs: build
    runs-on: ubuntu-latest
    steps:
      # SSH into the server
