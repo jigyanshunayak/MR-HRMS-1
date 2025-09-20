@@ -15,9 +15,9 @@ RUN chmod 2777 "/usr/src/app"
 COPY . /usr/src/app
 
 # Install app dependencies
-RUN npm install --pure-lockfile
-RUN npm run build
+RUN yarn install
+RUN yarn build
 
 EXPOSE 3030
 
-CMD [ "npm", "run", "start", "-p", "3030" ]
+CMD [ "yarn", "start", "-p", "3030" ]
